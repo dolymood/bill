@@ -48,7 +48,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="record in data.records" ng-init="showcts = record.customers.slice(0, 3)">
+			<tr ng-repeat="record in data.records | orderBy:'time':true" ng-init="showcts = record.customers.slice(0, 3)">
 				<td class="csize">{{record.outerMan.name || ''}}</td>
 				<td class="csize">{{record.money || 0}}</td>
 				<td class="csize">{{record.time}}</td>
